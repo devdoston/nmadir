@@ -1,0 +1,16 @@
+@model PostNinViewModel
+<div class="form-group">
+    @using (Html.BeginForm("Create", "PostNin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <label asp-for="Name" class="control-label"></label>
+        <input type="file" name="files" class="form-control" />
+    }
+
+    @*<input asp-for="NinImageString" class="form-control" />
+    <span asp-validation-for="NinImageString" class="text-danger"></span>*@
+</div>
+<div class="form-group">
+    <label asp-for="Name" class="control-label"></label>
+    <input asp-for="Name" class="form-control" />
+    <span asp-validation-for="Name" class="text-danger"></span>
+</div>
